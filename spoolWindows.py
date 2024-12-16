@@ -41,7 +41,7 @@ def clear_print_queue(printers_folder, log_file):
                     log.write(f"{time.ctime()}: Não foi possível remover o arquivo {file_path}: {e}\n")
 
 def check_permissions():
-    """Verifica se o script está sendo executado com permissões de administrador."""
+    """Verifica se o script está sendo executado com permissões de administrador"""
     if not os.name == 'nt' or not os.system("fltmc") == 0:
         print("Erro: Este script precisa ser executado com permissões de administrador.")
         sys.exit(1)
@@ -74,7 +74,7 @@ def main():
 
     # Verificar se o spooler está rodando
     if is_spooler_running():
-        print("Serviço de spooler em execução.")
+        print("Serviço de spooler em execução")
     else:
         print("Erro: Serviço de spooler não está em execução.")
         return
